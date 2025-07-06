@@ -19,19 +19,14 @@ The fundamental directory structure of the project is organized as follows to en
 ### Folder Descriptions:
 
 * **`assets/`**
-    * This folder contains all **optimized and selected assets** (images, sounds, etc.) that are directly used within the game.
-    * It only includes files that need to be part of the game and have been processed for performance.
+    * Includes only used assets in this game.
 
 * **`asset_source/`**
-    * This folder holds **all original asset files** provided by "Pixel Frog" and downloaded from the link above.
-    * **Important Note:** This folder is ignored by Git via the `.gitignore` file and is not included in the GitHub repository or the final build. This approach optimizes the project size while ensuring local access to all original assets.
+    * Includes all the assets downloaded from the above link. These assets were received from itch.io and prepared by Pixel Frog. Appreciated so much :)
+    * **Note:** This folder is Git ignored.
 
 * **`scripts/`**
-    * All **C# scripts** for the game are organized under this folder.
-    * Game mechanics, components, and other logical structures are managed here.
+    * All C# scripts.
 
 * **`scenes/`**
-    * This folder contains all **custom Godot scenes (`.tscn` files)** and reusable nodes for the game.
-    * Scenes for characters, enemies, levels, and user interface elements are located here.
-
----
+    * All custom scenes and nodes.
