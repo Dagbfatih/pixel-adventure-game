@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://bdmllljklapxh"]
+
+[ext_resource type="Script" uid="uid://chb07jsr7pxsw" path="res://shared/state_machine/states/FallState.cs" id="1_xk3ly"]
+
+[node name="FallState" type="Node"]
+script = ExtResource("1_xk3ly")
+AirControlSpeed = 600.0

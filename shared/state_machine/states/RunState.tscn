@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dmtdpkqbq35fj"]
+
+[ext_resource type="Script" uid="uid://bawfy1c3llvgw" path="res://shared/state_machine/states/RunState.cs" id="1_lgjsn"]
+
+[node name="RunState" type="Node"]
+script = ExtResource("1_lgjsn")

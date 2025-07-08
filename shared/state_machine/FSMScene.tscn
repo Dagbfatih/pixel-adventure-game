@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cugu4s5pwjduw"]
+
+[ext_resource type="Script" uid="uid://6fav61itr5j2" path="res://shared/state_machine/FiniteStateMachine.cs" id="1_1r7ic"]
+
+[node name="FsmScene" type="Node"]
+script = ExtResource("1_1r7ic")

@@ -1,0 +1,56 @@
+[gd_scene load_steps=7 format=3 uid="uid://bl1lw6v57of2b"]
+
+[ext_resource type="Script" uid="uid://biprhfslygxys" path="res://features/traps/spiked_ball/SpikedBall.cs" id="1_mtcqw"]
+[ext_resource type="Texture2D" uid="uid://bxh8slypgspo3" path="res://assets/Traps/Spiked Ball/Chain.png" id="1_w7pl2"]
+[ext_resource type="Texture2D" uid="uid://uudrvb6hxk0y" path="res://assets/Traps/Spiked Ball/Spiked Ball.png" id="2_mtcqw"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_d7iqi"]
+radius = 1.0
+height = 2.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_f556g"]
+radius = 6.0
+height = 12.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ahpfv"]
+radius = 12.0416
+
+[node name="SpikedBall" type="Node2D"]
+position = Vector2(595, 250)
+scale = Vector2(2, 2)
+script = ExtResource("1_mtcqw")
+SegmentCount = 8
+SegmentSpacing = 8.0
+SwingAngleDegrees = 180.0
+metadata/_edit_group_ = true
+
+[node name="ChainAnchor" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ChainAnchor"]
+shape = SubResource("CapsuleShape2D_d7iqi")
+
+[node name="Segment1" type="CharacterBody2D" parent="."]
+z_index = -1
+position = Vector2(1, 23)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Segment1"]
+scale = Vector2(1.375, 1.375)
+texture = ExtResource("1_w7pl2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Segment1"]
+shape = SubResource("CapsuleShape2D_f556g")
+disabled = true
+
+[node name="Ball" type="CharacterBody2D" parent="."]
+position = Vector2(0, 46)
+collision_layer = 8
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ball"]
+shape = SubResource("CircleShape2D_ahpfv")
+
+[node name="Sprite2D" type="Sprite2D" parent="Ball"]
+texture = ExtResource("2_mtcqw")
+
+[node name="Marker2D" type="Marker2D" parent="Ball"]

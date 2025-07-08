@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://ctdy3v3hhf0e8"]
+
+[ext_resource type="Script" uid="uid://ckth7t1cws4d7" path="res://shared/state_machine/states/JumpState.cs" id="1_pr3r1"]
+
+[node name="JumpState" type="Node"]
+script = ExtResource("1_pr3r1")
+InitialJumpVelocity = -1000.0
+JumpAcceleration = -6000.0
+MaxJumpVelocity = -600.0
+MaxJumpTime = 2.0
+AirControlSpeed = 600.0
