@@ -25,8 +25,14 @@ The fundamental directory structure of the project is organized as follows to en
     * Includes all the assets downloaded from the above link. These assets were received from itch.io and prepared by Pixel Frog. Appreciated so much :)
     * **Note:** This folder is Git ignored.
 
-* **`scripts/`**
-    * All C# scripts.
+* **`features/`**
+    * Contains the core features and modules of the game. Each feature includes its scenes and scripts in an organized manner.
 
-* **`scenes/`**
-    * All custom scenes and nodes.
+* **`game/`**
+    * Contains files related to the main game flow and general gameplay logic.
+
+* **`ui/`**
+    * Includes all scenes and scripts related to the user interface (UI).
+
+* **`shared/`**
+    * Contains common code and resources used by multiple features or components.
