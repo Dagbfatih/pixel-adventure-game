@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://7y000sqq7xtn"]
+
+[ext_resource type="Script" uid="uid://clbmfmy01b568" path="res://features/ui/in_game/HeartsUI.cs" id="1_eb4yp"]
+[ext_resource type="Texture2D" uid="uid://dsgqfhav84gjt" path="res://features/ui/in_game/FullHeartAtlas.tres" id="2_renob"]
+[ext_resource type="Texture2D" uid="uid://c1sj8yhxpl43a" path="res://features/ui/in_game/EmptyHeartAtlas.tres" id="3_ar53e"]
+
+[node name="HeartsUI" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_eb4yp")
+HeartFull = ExtResource("2_renob")
+HeartEmpty = ExtResource("3_ar53e")
+HeartSize = Vector2(32, 32)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0

@@ -16,7 +16,7 @@ public partial class JumpState : State
 	private float _elapsed = 0f;
 	private bool _jumping = true;
 
-	public override void Enter()
+	public override void Enter(StateParams parameters = null)
 	{
 		_elapsed = 0f;
 		_jumping = true;

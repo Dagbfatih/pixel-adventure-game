@@ -9,7 +9,7 @@ public partial class FallState : State
 
 	[Export] public float AirControlSpeed = 200.0f;
 
-	public override void Enter()
+	public override void Enter(StateParams parameters = null)
 	{
 		Sprite?.Play("fall");
 	}

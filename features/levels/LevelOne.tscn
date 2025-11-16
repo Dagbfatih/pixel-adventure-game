@@ -1,9 +1,11 @@
-[gd_scene load_steps=9 format=4 uid="uid://buouml3dv4d3a"]
+[gd_scene load_steps=11 format=4 uid="uid://buouml3dv4d3a"]
 
 [ext_resource type="PackedScene" uid="uid://c7m62eckdgsu" path="res://features/characters/player/Player.tscn" id="1_ndcac"]
+[ext_resource type="Script" uid="uid://w4674vqlkmej" path="res://shared/components/HealthComponent.cs" id="2_e168i"]
 [ext_resource type="Texture2D" uid="uid://c4qqhpordehrm" path="res://assets/Tiles/Terrain (16x16).png" id="2_snokf"]
 [ext_resource type="PackedScene" uid="uid://dxwyt46vbdsxu" path="res://features/areas/BackgroundTileMap.tscn" id="2_tg2tw"]
 [ext_resource type="PackedScene" uid="uid://bl1lw6v57of2b" path="res://features/traps/spiked_ball/SpikedBall.tscn" id="4_5imxt"]
+[ext_resource type="PackedScene" uid="uid://7y000sqq7xtn" path="res://features/ui/in_game/HeartsUI.tscn" id="6_0ty60"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5imxt"]
 texture = ExtResource("2_snokf")
@@ -368,6 +370,10 @@ sources/0 = SubResource("TileSetAtlasSource_yq0n1")
 position = Vector2(147.69, 131.1)
 collision_mask = 9
 
+[node name="HealthComponent" type="Node" parent="Player"]
+script = ExtResource("2_e168i")
+CurrentHearts = 3
+
 [node name="Map" type="Node2D" parent="."]
 
 [node name="CollisionTileMap" type="TileMapLayer" parent="Map"]
@@ -411,3 +417,12 @@ position = Vector2(575, 62)
 SegmentCount = 7
 SegmentSpacing = 10.0
 SwingAngleDegrees = 170.0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="HeartsUI" parent="CanvasLayer" node_paths=PackedStringArray("HealthComponent") instance=ExtResource("6_0ty60")]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+grow_horizontal = 2
+HealthComponent = NodePath("../../Player/HealthComponent")

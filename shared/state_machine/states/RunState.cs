@@ -10,7 +10,7 @@ public partial class RunState : State
 		this.Key = "Run";
 	}
 
-	public override void Enter()
+	public override void Enter(StateParams parameters = null)
 	{
 		Sprite?.Play("run");
 

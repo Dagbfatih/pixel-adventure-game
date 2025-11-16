@@ -1,6 +1,6 @@
 using Godot;
 
-public partial class Player : CharacterBody2D, ICharacterState
+public partial class Player : CharacterBody2D, ICharacterState, IHealth
 {
 	public Vector2 Direction { get; set; } = Vector2.Left;
 

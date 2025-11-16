@@ -1,0 +1,130 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Software\\GameDevelopment\\pixel-adventure-game\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{0C692A5F-998C-4050-89BD-6FCEEAE65486}|Demo2.csproj|d:\\software\\gamedevelopment\\pixel-adventure-game\\shared\\state_machine\\states\\runstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C692A5F-998C-4050-89BD-6FCEEAE65486}|Demo2.csproj|solutionrelative:shared\\state_machine\\states\\runstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C692A5F-998C-4050-89BD-6FCEEAE65486}|Demo2.csproj|d:\\software\\gamedevelopment\\pixel-adventure-game\\shared\\state_machine\\finitestatemachine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C692A5F-998C-4050-89BD-6FCEEAE65486}|Demo2.csproj|solutionrelative:shared\\state_machine\\finitestatemachine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C692A5F-998C-4050-89BD-6FCEEAE65486}|Demo2.csproj|d:\\software\\gamedevelopment\\pixel-adventure-game\\shared\\state_machine\\states\\jumpstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C692A5F-998C-4050-89BD-6FCEEAE65486}|Demo2.csproj|solutionrelative:shared\\state_machine\\states\\jumpstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C692A5F-998C-4050-89BD-6FCEEAE65486}|Demo2.csproj|d:\\software\\gamedevelopment\\pixel-adventure-game\\shared\\state_machine\\states\\idlestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C692A5F-998C-4050-89BD-6FCEEAE65486}|Demo2.csproj|solutionrelative:shared\\state_machine\\states\\idlestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C692A5F-998C-4050-89BD-6FCEEAE65486}|Demo2.csproj|d:\\software\\gamedevelopment\\pixel-adventure-game\\features\\traps\\spiked_ball\\spikedball.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C692A5F-998C-4050-89BD-6FCEEAE65486}|Demo2.csproj|solutionrelative:features\\traps\\spiked_ball\\spikedball.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C692A5F-998C-4050-89BD-6FCEEAE65486}|Demo2.csproj|d:\\software\\gamedevelopment\\pixel-adventure-game\\shared\\state_machine\\state.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C692A5F-998C-4050-89BD-6FCEEAE65486}|Demo2.csproj|solutionrelative:shared\\state_machine\\state.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "RunState.cs",
+              "DocumentMoniker": "D:\\Software\\GameDevelopment\\pixel-adventure-game\\shared\\state_machine\\states\\RunState.cs",
+              "RelativeDocumentMoniker": "shared\\state_machine\\states\\RunState.cs",
+              "ToolTip": "D:\\Software\\GameDevelopment\\pixel-adventure-game\\shared\\state_machine\\states\\RunState.cs",
+              "RelativeToolTip": "shared\\state_machine\\states\\RunState.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAAzwC8AAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-03T09:35:20.193Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "JumpState.cs",
+              "DocumentMoniker": "D:\\Software\\GameDevelopment\\pixel-adventure-game\\shared\\state_machine\\states\\JumpState.cs",
+              "RelativeDocumentMoniker": "shared\\state_machine\\states\\JumpState.cs",
+              "ToolTip": "D:\\Software\\GameDevelopment\\pixel-adventure-game\\shared\\state_machine\\states\\JumpState.cs",
+              "RelativeToolTip": "shared\\state_machine\\states\\JumpState.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAwwBkAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-03T09:22:02.752Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IdleState.cs",
+              "DocumentMoniker": "D:\\Software\\GameDevelopment\\pixel-adventure-game\\shared\\state_machine\\states\\IdleState.cs",
+              "RelativeDocumentMoniker": "shared\\state_machine\\states\\IdleState.cs",
+              "ToolTip": "D:\\Software\\GameDevelopment\\pixel-adventure-game\\shared\\state_machine\\states\\IdleState.cs",
+              "RelativeToolTip": "shared\\state_machine\\states\\IdleState.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-03T09:09:06.592Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "SpikedBall.cs",
+              "DocumentMoniker": "D:\\Software\\GameDevelopment\\pixel-adventure-game\\features\\traps\\spiked_ball\\SpikedBall.cs",
+              "RelativeDocumentMoniker": "features\\traps\\spiked_ball\\SpikedBall.cs",
+              "ToolTip": "D:\\Software\\GameDevelopment\\pixel-adventure-game\\features\\traps\\spiked_ball\\SpikedBall.cs",
+              "RelativeToolTip": "features\\traps\\spiked_ball\\SpikedBall.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAwwG8AAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-03T09:02:13.008Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "State.cs",
+              "DocumentMoniker": "D:\\Software\\GameDevelopment\\pixel-adventure-game\\shared\\state_machine\\State.cs",
+              "RelativeDocumentMoniker": "shared\\state_machine\\State.cs",
+              "ToolTip": "D:\\Software\\GameDevelopment\\pixel-adventure-game\\shared\\state_machine\\State.cs",
+              "RelativeToolTip": "shared\\state_machine\\State.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-03T09:02:01.613Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FiniteStateMachine.cs",
+              "DocumentMoniker": "D:\\Software\\GameDevelopment\\pixel-adventure-game\\shared\\state_machine\\FiniteStateMachine.cs",
+              "RelativeDocumentMoniker": "shared\\state_machine\\FiniteStateMachine.cs",
+              "ToolTip": "D:\\Software\\GameDevelopment\\pixel-adventure-game\\shared\\state_machine\\FiniteStateMachine.cs",
+              "RelativeToolTip": "shared\\state_machine\\FiniteStateMachine.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAgwBEAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-03T09:01:25.491Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

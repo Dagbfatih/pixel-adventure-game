@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using Godot;
 
 public enum RotationDirection
@@ -26,6 +27,7 @@ public partial class SpikedBall : Node2D, ICircularMovable
 	private readonly List<CharacterBody2D> _chainParts = new();
 	private CharacterBody2D _segment1;
 	private CharacterBody2D _ball;
+	private Area2D _hitbox;
 
 	public override void _Ready()
 	{
@@ -42,6 +44,11 @@ public partial class SpikedBall : Node2D, ICircularMovable
 
 		// Start phase: left or right
 		time = (Direction == RotationDirection.CW) ? 0f : SwingDuration / 2f;
+
+		_hitbox = _ball.GetNode<Area2D>("Hitbox");
+
+		// 👇 Connect the signal
+		_hitbox.BodyEntered += OnHitboxBodyEntered;
 	}
 
 	public override void _Process(double delta)
@@ -109,5 +116,29 @@ public partial class SpikedBall : Node2D, ICircularMovable
 			Position = ToLocal((a.GlobalPosition + b.GlobalPosition) / 2f),
 			Softness = 0f,
 		};
+	}
+
+	private void OnHitboxBodyEntered(Node2D body)
+	{
+		// 1. Check if the body is the player (you might use a specific C# class
+		//    or check if it has the HealthComponent)
+
+		// Assuming your player has a script/class called 'Player'
+		if (body is Player player)
+		{
+			var fsm = player.GetChildren().OfType<FiniteStateMachine>().FirstOrDefault();
+			if (fsm == null)
+				return;
+
+			// Knockback vector oluştur
+			Vector2 knockbackVector = (player.GlobalPosition - GlobalPosition).Normalized() * 400f;
+			int damage = 1;
+			// FSM’e parametreli state değişikliği yap
+			fsm.ChangeState("Hurt", new HurtStateParams(knockbackVector, damage));
+		}
+		// You can add additional checks here if the player has to be on the floor 
+		// or pressing a button, but typical hazard damage is instant upon touch. 
+		// The original code's `IsOnFloor()` and `Input.IsActionJustPressed()` 
+		// checks are more appropriate for a player's attack or action, not a hazard's damage.
 	}
 }

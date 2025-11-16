@@ -15,7 +15,7 @@ public partial class State : Node
 		Sprite = Actor.GetNodeOrNull<AnimatedSprite2D>("AnimatedSprite2D");
 	}
 
-	public virtual void Enter() { }
+	public virtual void Enter(StateParams parameters = null) { }
 	public virtual void Exit() { }
 	public virtual void StatePhysicsProcess(double delta) { }
 }

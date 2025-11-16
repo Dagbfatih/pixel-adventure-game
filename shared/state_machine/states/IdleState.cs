@@ -7,7 +7,7 @@ public partial class IdleState : State
 		this.Key = "Idle";
 	}
 
-	public override void Enter()
+	public override void Enter(StateParams parameters = null)
 	{
 		Sprite?.Play("idle");
 	}

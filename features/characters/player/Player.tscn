@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=3 uid="uid://c7m62eckdgsu"]
+[gd_scene load_steps=48 format=3 uid="uid://c7m62eckdgsu"]
 
 [ext_resource type="Script" uid="uid://bfl3roidy7t26" path="res://features/characters/player/Player.cs" id="1_jkx8g"]
 [ext_resource type="PackedScene" uid="uid://cugu4s5pwjduw" path="res://shared/state_machine/FSMScene.tscn" id="3_inekf"]
@@ -6,10 +6,12 @@
 [ext_resource type="PackedScene" uid="uid://e7mipqiua6ht" path="res://shared/state_machine/states/IdleState.tscn" id="5_xpmps"]
 [ext_resource type="PackedScene" uid="uid://ctdy3v3hhf0e8" path="res://shared/state_machine/states/JumpState.tscn" id="6_0quyc"]
 [ext_resource type="Script" uid="uid://bewxmaxcsy1pv" path="res://shared/components/GravityComponent.cs" id="6_ssa6s"]
+[ext_resource type="PackedScene" uid="uid://kuu4wcngh2n" path="res://shared/state_machine/states/HurtState.tscn" id="7_cuign"]
 [ext_resource type="PackedScene" uid="uid://bdmllljklapxh" path="res://shared/state_machine/states/FallState.tscn" id="7_h5o6a"]
 [ext_resource type="Texture2D" uid="uid://ccdru5j7mcmkk" path="res://assets/Characters/Ninja Frog/Fall (32x32).png" id="8_3kr1v"]
 [ext_resource type="Texture2D" uid="uid://tc48x2ylkrxg" path="res://assets/Characters/Ninja Frog/Idle (32x32).png" id="9_3kr1v"]
 [ext_resource type="Texture2D" uid="uid://4r1tkhi52bln" path="res://assets/Characters/Ninja Frog/Jump (32x32).png" id="10_cal43"]
+[ext_resource type="Texture2D" uid="uid://bgu6f23px10xm" path="res://assets/Characters/Ninja Frog/Hit (32x32).png" id="10_tq07j"]
 [ext_resource type="Texture2D" uid="uid://chp4chrr8vnlt" path="res://assets/Characters/Ninja Frog/Run (32x32).png" id="11_cal43"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ssa6s"]
@@ -18,6 +20,34 @@ size = Vector2(24, 30)
 [sub_resource type="AtlasTexture" id="AtlasTexture_cal43"]
 atlas = ExtResource("8_3kr1v")
 region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s0nsk"]
+atlas = ExtResource("10_tq07j")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hu7sv"]
+atlas = ExtResource("10_tq07j")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qmxlo"]
+atlas = ExtResource("10_tq07j")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6v6bf"]
+atlas = ExtResource("10_tq07j")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8pqoj"]
+atlas = ExtResource("10_tq07j")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7echy"]
+atlas = ExtResource("10_tq07j")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5r80i"]
+atlas = ExtResource("10_tq07j")
+region = Rect2(192, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cuign"]
 atlas = ExtResource("9_3kr1v")
@@ -126,6 +156,32 @@ animations = [{
 "speed": 5.0
 }, {
 "frames": [{
+"duration": 0.2,
+"texture": SubResource("AtlasTexture_s0nsk")
+}, {
+"duration": 0.2,
+"texture": SubResource("AtlasTexture_hu7sv")
+}, {
+"duration": 0.2,
+"texture": SubResource("AtlasTexture_qmxlo")
+}, {
+"duration": 0.2,
+"texture": SubResource("AtlasTexture_6v6bf")
+}, {
+"duration": 0.2,
+"texture": SubResource("AtlasTexture_8pqoj")
+}, {
+"duration": 0.2,
+"texture": SubResource("AtlasTexture_7echy")
+}, {
+"duration": 0.2,
+"texture": SubResource("AtlasTexture_5r80i")
+}],
+"loop": true,
+"name": &"hurt",
+"speed": 5.0
+}, {
+"frames": [{
 "duration": 0.5,
 "texture": SubResource("AtlasTexture_cuign")
 }, {
@@ -225,8 +281,6 @@ shape = SubResource("RectangleShape2D_ssa6s")
 [node name="PlayerFsm" parent="." node_paths=PackedStringArray("DefaultState") instance=ExtResource("3_inekf")]
 DefaultState = NodePath("PlayerIdleState")
 
-[node name="PlayerRunState" parent="PlayerFsm" instance=ExtResource("4_4nqet")]
-
 [node name="PlayerIdleState" parent="PlayerFsm" instance=ExtResource("5_xpmps")]
 
 [node name="PlayerJumpState" parent="PlayerFsm" instance=ExtResource("6_0quyc")]
@@ -235,7 +289,11 @@ JumpAcceleration = -9000.0
 MaxJumpVelocity = -800.0
 MaxJumpTime = 3.0
 
-[node name="PlayerFallState" parent="PlayerFsm" instance=ExtResource("7_h5o6a")]
+[node name="RunState" parent="PlayerFsm" instance=ExtResource("4_4nqet")]
+
+[node name="FallState" parent="PlayerFsm" instance=ExtResource("7_h5o6a")]
+
+[node name="PlayerHurtState" parent="PlayerFsm" instance=ExtResource("7_cuign")]
 
 [node name="GravityComponent" type="Node2D" parent="."]
 script = ExtResource("6_ssa6s")
@@ -244,4 +302,4 @@ MaxFallSpeed = 1500.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_0bhil")
-animation = &"idle"
+animation = &"hurt"

@@ -1,0 +1,6 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://c1sj8yhxpl43a"]
+
+[ext_resource type="Texture2D" uid="uid://c2lfb87wvn1i0" path="res://assets/Tiles/heart-empty.png" id="1_d42k7"]
+
+[resource]
+atlas = ExtResource("1_d42k7")
